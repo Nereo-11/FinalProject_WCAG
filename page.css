@@ -1,0 +1,624 @@
+* {
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Comic Sans', sans-serif;
+    padding-top: 100px; /* Espacio para el encabezado */
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #171b1c;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    z-index: 10;
+}
+
+.item {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.item:hover {
+    color: #198c94;
+}
+
+h2{
+    text-decoration: none;
+    text-align: center;
+    color: #198c94;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h1,a {
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h1:hover{
+    color: #198c94; 
+    transform: scale(1.05); 
+}
+
+.normal {
+    color: #ffffff;
+}
+
+.titulo-grande {
+    font-size: 35px; /* Cambia el tamaño a 40 píxeles */
+}
+
+a:hover{
+    color: y#626467; 
+    transform: scale(1.05); 
+}
+
+h3 {
+    text-align: left;
+    color: #000000;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 75px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+p, ol {
+    text-align: justify;
+    padding: 0 5%;
+}
+
+iframe {
+    display: block;
+    margin: 20px auto;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"], select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.button-special {
+    
+    background-color: #12542E;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-special:hover {
+    background-color: #219653;
+}
+
+/* General table styles (sin cambios) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #175A87;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover td {
+    background-color: #f1f1f1;
+}
+
+/* Cursor style only for Estado column */
+td.estado {
+    cursor: pointer;
+}
+
+td.highlight {
+    background-color: #fff4a3; /* Amarillo claro */
+    color: #333; /* Texto oscuro para buen contraste */
+}
+
+td.estado:hover {
+    background-color: #d9e6f2; /* Color especial al pasar por Estado */
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007BFF; /* Azul por defecto */
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.close-button {
+    background-color: #FF4B4B; /* Rojo */
+    right: 5px; /* Mover ligeramente a la izquierda del botón de agregar */
+}
+
+.floating-button:hover {
+    opacity: 0.9;
+}
+
+.floating-buttonn:hover {
+    background-color: #144d6f;
+}
+
+#form-section {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+button.ad {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  button.ad:hover {
+    background-color: #003f6f;
+  }
+  
+  button.ad:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+  }
+
+
+
+
+
+
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.menu .item {
+    display: inline;
+    margin: 0 10px;
+}
+
+.menu .item a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.hero-image {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.info-section,
+.about-section,
+.how-to-section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.steps-list li {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+}
+
+footer a {
+    color: #5290d8;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .carousel */
+
+img.reload {
+    padding: 0.25em;
+    display: block-inline;
+    position: relative;
+    top: 6px;
+    height: 0.9em;
+  }
+  
+  .carousel {
+    background-color: transparent;
+    max-width: 900px;
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel .carousel-inner {
+    position: relative;
+    width: 100%;
+  }
+  
+  .carousel .carousel-items {
+    padding: 5px;
+  }
+  
+  .carousel .carousel-items.focus {
+    padding: 2px;
+    border: solid 3px #005a9c;
+  }
+  
+  .carousel .carousel-item {
+    display: none;
+    max-height: 400px;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel .carousel-item.active {
+    display: block;
+  }
+  
+  /* More like bootstrap, less accessible */
+  
+  .carousel .carousel-item .carousel-image img {
+    width: 500px; /* Establece el ancho fijo */
+    height: 400px; /* Establece el alto fijo */
+    object-fit: cover; /* Asegura que las imágenes mantengan su proporción */
+    display: block;
+    margin: 0 auto; /* Centra las imágenes horizontalmente */
+  }
+  
+  .carousel .carousel-item .carousel-caption a {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .carousel .carousel-item .carousel-caption a,
+  .carousel .carousel-item .carousel-caption span.contrast {
+    display: inline-block;
+    margin: 0;
+    padding: 6px;
+    background-color: rgb(0 0 0 / 65%);
+    border-radius: 5px;
+    border: 0 solid transparent;
+  }
+  
+  .carousel-moreaccessible .carousel-items .carousel-image a {
+    display: block;
+    margin: 0;
+    padding: 5px;
+    text-decoration: none;
+    border: none;
+  }
+  
+  .carousel-moreaccessible .carousel-item .carousel-caption a {
+    display: inline-block;
+    margin: 0;
+    padding: 6px;
+    color: black;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .carousel-moreaccessible .carousel-item .carousel-caption span.contrast,
+  .carousel-moreaccessible .carousel-item .carousel-caption span.contrast:hover {
+    background-color: transparent;
+  }
+  
+  .carousel .carousel-item .carousel-caption a:hover,
+  .carousel .carousel-item .carousel-caption span.contrast:hover {
+    background-color: rgb(0 0 0 / 100%);
+  }
+  
+  .carousel .carousel-item .carousel-caption a:focus {
+    padding: 4px;
+    border: 2px solid #fff;
+    background-color: rgb(0 0 0 / 100%);
+    outline: none;
+    border-width: 2px solid #fff;
+    color: #fff;
+  }
+  
+  .carousel .carousel-item .carousel-caption p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  
+  .carousel .carousel-item .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+    left: 15%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Shared CSS for Pause, Previous and Next Buttons */
+  
+  .carousel .controls {
+    box-sizing: border-box;
+    position: absolute;
+    top: 1em;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    padding: 0.25em 1.25em 0;
+  }
+  
+  .carousel .controls button {
+    position: absolute;
+    z-index: 10;
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+  
+  .carousel .controls button.previous {
+    right: 70px;
+  }
+  
+  .carousel .controls button.next {
+    right: 18px;
+  }
+  
+  /* SVG Controls */
+  
+  .carousel .controls svg .background {
+    stroke: black;
+    fill: black;
+    stroke-width: 1px;
+    opacity: 0.6;
+  }
+  
+  .carousel .controls svg .border {
+    fill: transparent;
+    stroke: transparent;
+    stroke-width: 2px;
+  }
+  
+  .carousel .controls svg .pause {
+    stroke-width: 4;
+    fill: transparent;
+    stroke: transparent;
+  }
+  
+  .carousel .controls svg .play {
+    stroke-width: 1;
+    fill: transparent;
+    stroke: transparent;
+  }
+  
+  .carousel .controls .pause svg .pause {
+    fill: white;
+    stroke: white;
+  }
+  
+  .carousel .controls .play svg .play {
+    fill: white;
+    stroke: white;
+  }
+  
+  .carousel .controls svg polygon {
+    fill: white;
+    stroke: white;
+  }
+  
+  .carousel .controls button:focus svg .background,
+  .carousel .controls button:hover svg .background,
+  .carousel .controls button:hover svg .border {
+    fill: #005a9c;
+    stroke: #005a9c;
+    opacity: 1;
+  }
+  
+  .carousel .controls button:focus svg .border {
+    stroke: white;
+  }
+  
+  /* More accessible carousel styles, with caption and controls above/below image */
+  
+  .carousel-moreaccessible {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    border: #eee solid 4px;
+    border-radius: 5px;
+  }
+  
+  /* Shared CSS for Pause and Tab Controls */
+  
+  .carousel-moreaccessible .controls {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0.25em 0.25em 0;
+  }
+  
+  .carousel.carousel-moreaccessible .controls {
+    position: static;
+    height: 36px;
+  }
+  
+  .carousel.carousel-moreaccessible .controls button.previous {
+    right: 60px;
+  }
+  
+  .carousel.carousel-moreaccessible .controls button.next {
+    right: 6px;
+  }
+  
+  .carousel-moreaccessible .carousel-items,
+  .carousel-moreaccessible .carousel-items.focus {
+    padding: 0;
+    border: none;
+  }
+  
+  .carousel-moreaccessible .carousel-items.focus .carousel-image a {
+    padding: 2px;
+    border: 3px solid #005a9c;
+  }
+  
+  /* More accessible caption styling */
+  
+  .carousel-moreaccessible .carousel-item {
+    padding: 0;
+    margin: 0;
+    max-height: none;
+  }
+  
+  .carousel-moreaccessible .carousel-item .carousel-caption {
+    position: static;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    color: black;
+  }
+  
+  .carousel-moreaccessible .carousel-item .carousel-caption p {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .carousel-moreaccessible .carousel-item .carousel-caption h3 {
+    font-size: 1.1em;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .carousel-moreaccessible .carousel-item .carousel-caption a:hover {
+    background-color: rgb(0 0 0 / 20%);
+  }
+  
+  .carousel-moreaccessible .carousel-item .carousel-caption a:focus {
+    padding: 4px;
+    border: 2px solid #005a9c;
+    background-color: transparent;
+    color: black;
+    outline: none;
+  }
+
+  #caption{
+    background-color:  transparent;
+  }

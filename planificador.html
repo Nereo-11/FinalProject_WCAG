@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEOGOALS</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    <header id="header">
+        <h1>NEOGOALS</h1> 
+        <ul class="menu">
+            <li class="item"><a href="index.html">Inicio</a></li>
+            <li class="item"><a href="recurso.html">Recurso</a></li>
+            <li class="item"><a href="planificador.html">Mi Planificador</a></li>
+        </ul>
+    </header>
+    
+    <h2>MI PLANIFICADOR</h2>
+
+    <!-- Formulario -->
+    <section id="form-section" style="display: none;">
+        <form id="habitForm">
+            <label for="nombre">Meta</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ejemplo: Ganar un trofeo" required>
+
+            <label for="habito">Hábito</label>
+            <input type="text" id="habito" name="habito" placeholder="Ejemplo: Entrenar 5 días a la semana" required>
+
+            <label for="stars">Nivel de Dificultad</label>
+            <select name="stars" id="stars">
+                <option value="1">1 - Fácil</option>
+                <option value="2">2</option>
+                <option value="3">3 - Medio</option>
+                <option value="4">4</option>
+                <option value="5">5 - Difícil</option>
+            </select>
+
+            <label for="status">Estado</label>
+            <select name="status" id="status">
+                <option value="En progreso">En progreso</option>
+                <option value="Pendiente">Pendiente</option>
+            </select>
+
+            <button type="submit" class="button-special">Agregar Meta</button>
+        </form>
+    </section>
+
+    <!-- Tabla de metas -->
+    <table>
+        <thead>
+            <tr>
+                <th>Meta</th>
+                <th>Hábitos</th>
+                <th>Dificultad</th>
+                <th>Estado</th>
+                <th>Completar</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Botón flotante -->
+    <button id="add-button" class="floating-button">+</button>
+    <button id="close-button" class="floating-button close-button" style="display: none;">−</button>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Nereo Aranda. Todos los derechos reservados. <a href="https://www.instagram.com/nereo_uriel/">Instagram</a></p>
+    </footer>
+</body>
+</html>
