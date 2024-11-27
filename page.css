@@ -443,9 +443,9 @@ img.reload {
   
   .carousel .carousel-item .carousel-caption {
     position: absolute;
-    right: 15%;
+    right: 30%;
     bottom: 0;
-    left: 15%;
+    left: 30%;
     padding-top: 20px;
     padding-bottom: 20px;
     color: #fff;
